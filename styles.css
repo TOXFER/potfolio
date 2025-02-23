@@ -1,0 +1,86 @@
+.photo-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.photo-grid .row {
+	display: flex;
+	width: 100%;
+}
+
+.photo-grid .col {
+	flex: 1;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+.photo-img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	border-radius: 15px; /* Add this line */
+}
+
+.about-images {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+.about-img {
+	width: 30%;
+	border-radius: 15px;
+}
+
+.navbar {
+	width: 100%;
+	background-color: transparent; /* Change this line */
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add this line */
+}
+
+.navbar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	background-color: white; /* Add this line */
+	border-radius: 8px; /* Add this line */
+}
+
+.navbar ul li {
+	padding: 14px 20px;
+}
+
+.navbar ul li a {
+	color: rgb(0, 0, 0);
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script%7CPoppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+}
+
+.navbar ul li a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+body {
+	padding-top: 50px; /* Add padding to avoid content being hidden behind the navbar */
+}
+
+.nav-box {
+	background-color: white;
+	border-radius: 8px;
+	padding: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	display: flex;
+	justify-content: center;
+}
+
+
