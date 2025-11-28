@@ -20,24 +20,42 @@
 	<link rel="stylesheet" href="animation.css" >
 	<link rel="stylesheet" href="styles.css" >
 
+	<style>
+		html { scroll-behavior: smooth; }
+		.about-me-section, .contact-section { padding: 80px 0; background: #f8f9fa; }
+		.about-me-section h3 .title, .contact-section h3 .title { font-size: 2.5rem; color: #333; text-align: center; }
+		.about-me-content p { font-size: 1.1rem; line-height: 1.8; color: #666; margin-bottom: 20px; text-align: center; }
+		.contact-content { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+		.contact-info h4 { color: #333; margin-bottom: 20px; font-size: 1.5rem; }
+		.contact-links a { display: block; margin-bottom: 15px; color: #007bff; text-decoration: none; font-weight: 500; }
+		.contact-links a:hover { color: #0056b3; }
+		.contact-form { display: flex; flex-direction: column; gap: 20px; }
+		.contact-form input, .contact-form textarea { padding: 15px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; }
+		.contact-form button { padding: 15px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-family: inherit; }
+		.contact-form button:hover { background: #0056b3; }
+		@media (max-width: 768px) { .contact-content { grid-template-columns: 1fr; } }
+	</style>
+
 </head>
 <body>
 	<video autoplay muted loop id="background-video" class="fade-in">
 		<source src="video.mp4" type="video/mp4">
 	</video>
 
-	<!-- Navigation -->
+	<!-- Navigation - ADDED About Me & Contact -->
 	<nav class="navbar">
 		<div class="nav-box">
 			<ul>
 				<li><a href="#about-section">About</a></li>
+				<li><a href="#about-me-section">About Me</a></li>
 				<li><a href="#services-section">My Links</a></li>
 				<li><a href="#photography-section">Photography</a></li>
+				<li><a href="#contact-section">Contact</a></li>
 			</ul>
 		</div>
 	</nav>
 
-	<!-- Section About -->
+	<!-- Section About (UNCHANGED) -->
 	<div class="section about align-left" id="about-section">
 		<div class="fw">
 			<div class="row">
@@ -59,7 +77,6 @@
 								"I tried so hard and got so far ,but in the it doesn't even matter"
 							    </I></b>
 							 </P>
-							 
                              
 						</p>
 					</div>
@@ -68,7 +85,22 @@
 		</div>
 	</div>
 
-	<!-- Section Services -->
+	<!-- NEW About Me Section -->
+	<div class="section about-me-section align-center" id="about-me-section">
+		<div class="fw">
+			<div class="titles">
+				<div class="text-box fade-in-element">
+					<h3><div class="title">About Me</div></h3>
+					<div class="about-me-content">
+						<p>2nd year AI & Data Science student from Pune, Maharashtra. Passionate about Python, AI chatbots (NUKE.AI), web development, and photography. Love building innovative tools and learning new technologies daily.</p>
+						<p>Currently exploring autonomous AI agents, real-time APIs, and DSA visualization tools while participating in tech meetups.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Section Services (UNCHANGED) -->
 	<div class="section services gray align-center" id="services-section">
 		<div class="fw">
 			<div class="titles">
@@ -86,7 +118,36 @@
 			</div>
 		</div>
 	</div>
-	<!-- photography-->
+
+	<!-- NEW Contact Section -->
+	<div class="section contact-section align-center" id="contact-section">
+		<div class="fw">
+			<div class="titles">
+				<div class="text-box fade-in-element">
+					<h3><div class="title">Contact Me</div></h3>
+				</div>
+			</div>
+			<div class="contact-content">
+				<div class="contact-info fade-in-element">
+					<h4>Get In Touch</h4>
+					<p>Let's collaborate on AI projects, web development, or discuss opportunities!</p>
+					<div class="contact-links">
+						<a href="mailto:your.email@example.com">📧 Email</a>
+						<a href="https://www.linkedin.com/in/aniket-khobragade-6b03b4268">💼 LinkedIn</a>
+						<a href="https://github.com/TOXFER">🐙 GitHub</a>
+					</div>
+				</div>
+				<form class="contact-form fade-in-element">
+					<input type="text" placeholder="Your Name" required>
+					<input type="email" placeholder="Your Email" required>
+					<textarea placeholder="Your Message" rows="5" required></textarea>
+					<button type="submit">Send Message</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- photography (UNCHANGED) -->
 	<div class="section photography align-center" id="photography-section">
 		<div class="fw">
 			<div class="titles">
@@ -130,7 +191,5 @@
 		</div>
 	</div>
 					
-	
 </body>
 </html>
-
